@@ -1,0 +1,1 @@
+package com.annamaple;import cn.hutool.core.date.DateTime;import cn.hutool.core.lang.Console;public class Main {    public static void main(String[] args) {        Console.log("你好: {}, 当前时间为：{}", "anna", DateTime.now());    }}
