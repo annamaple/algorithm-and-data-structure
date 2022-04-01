@@ -34,11 +34,12 @@ hs_err_pid*
 .idea/
 
 .DS_Store/
-/target
 
 /target
 /target/
 **/target/
 /out
+/.gradle
+/build
 
 .DS_Store
