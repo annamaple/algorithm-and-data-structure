@@ -20,17 +20,18 @@ package com.annamaple.leetcode;
  * 输出：0<br>
  *
  * 提示：<br>
- * 0 <= n <= 104<br>
+ * 0 <= n <= 104
+ * <br>
  *
  * 进阶：你可以设计并实现对数时间复杂度的算法来解决此问题吗？<br>
  * @author xionglei
  * @link https://leetcode-cn.com/problems/factorial-trailing-zeroes/
  * @create 2022-03-25 10:48
  */
-public class LeetCode172 {
+public class LeetCode172{
     
     
-    private static class Solution172 {
+    private static class Solution {
         public int trailingZeroes(int n) {
             if (n > 0) {
                 
@@ -38,4 +39,6 @@ public class LeetCode172 {
             return 0;
         }
     }
+    
+    
 }
