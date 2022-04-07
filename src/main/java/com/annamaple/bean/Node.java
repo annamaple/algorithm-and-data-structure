@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Node<E> {
+public class Node<E extends  Comparable<E>> {
 
     /**
      * 前节点

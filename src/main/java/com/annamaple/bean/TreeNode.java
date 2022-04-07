@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TreeNode<E> extends Node<E> {
+public class TreeNode<E extends Comparable<E>> extends Node<E> {
 
     /**
      * 父节点

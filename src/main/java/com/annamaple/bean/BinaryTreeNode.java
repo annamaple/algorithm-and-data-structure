@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BinaryTreeNode<E> extends TreeNode<E> {
+public class BinaryTreeNode<E extends Comparable<E>> extends TreeNode<E> {
 
     /**
      * 左子节点

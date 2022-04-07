@@ -95,6 +95,7 @@ public class NodeFactory {
     public static void main(String[] args) {
         NodeFactory factory = new NodeFactory(10);
         NodeUtil.print(factory.createLinkedList());
+        System.out.println();
         System.out.println("binary tree: ");
         BinaryTreeNode<Integer> head = factory.createBinaryTree();
         NodeUtil.print(head);

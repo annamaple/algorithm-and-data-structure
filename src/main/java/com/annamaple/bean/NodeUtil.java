@@ -9,7 +9,7 @@ import java.util.Queue;
  */
 public class NodeUtil {
     
-    public static <E> void print(Node<E> head) {
+    public static <E extends Comparable<E>> void print(Node<E> head) {
         if (head == null) {
             return;
         }
@@ -17,7 +17,7 @@ public class NodeUtil {
         print(head.next);
     }
     
-    public static <E> void print(BinaryTreeNode<E> head) {
+    public static <E extends Comparable<E>> void print(BinaryTreeNode<E> head) {
         if (head == null) {
             return;
         }
@@ -26,7 +26,7 @@ public class NodeUtil {
         print(head.right);
     }
     
-    public static <E> void printBfs(BinaryTreeNode<E> head) {
+    public static <E extends Comparable<E>> void printBfs(BinaryTreeNode<E> head) {
         if (head == null) {
             return;
         }
