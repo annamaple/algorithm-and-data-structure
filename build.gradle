@@ -16,6 +16,9 @@ dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
     // https://mvnrepository.com/artifact/cn.hutool/hutool-core
     implementation group: 'cn.hutool', name: 'hutool-core', version: '5.7.22'
+    // mysql https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.47'
+
 }
 
 test {
