@@ -31,15 +31,14 @@ hs_err_pid*
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea
 
 .DS_Store/
 
 /target
 /target/
 **/target/
-/out
-/.gradle
-/build
+out
+.gradle
 
 .DS_Store
