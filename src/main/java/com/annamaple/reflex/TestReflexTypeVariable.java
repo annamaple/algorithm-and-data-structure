@@ -1,6 +1,7 @@
 package com.annamaple.reflex;
 
 import cn.hutool.core.lang.Console;
+import lombok.val;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -28,10 +29,11 @@ public class TestReflexTypeVariable<K extends Comparable<? super K> & Serializab
     private List<? extends Number> a;
     // 下限
     private List<? super String> b;
-
     public static void main(String[] args) {
         // 获取字段类型
-        Class<TestReflexTypeVariable> typeClass = TestReflexTypeVariable.class;
+        // 相当于@val final Class<TestReflexTypeVariable> typeClass = TestReflexTypeVariable.class;
+        // 注意val 为annotation类型@interface
+        val typeClass = TestReflexTypeVariable.class;
         try {
             Field fk = typeClass.getDeclaredField("key");
             Field fv = typeClass.getDeclaredField("value");
