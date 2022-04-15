@@ -15,12 +15,12 @@ import java.lang.reflect.Method;
 public class AdminServiceInvocationHandler implements InvocationHandler {
 
     /**
-     * 被代理的类
+     * 被代理的对象，可以是任意类型。这里是今天代理和动态代理的很大区别
      */
-    private AdminService adminService;
+    private Object realObject;
 
-    public AdminServiceInvocationHandler(AdminService adminService) {
-        this.adminService = adminService;
+    public AdminServiceInvocationHandler(Object realObject) {
+        this.realObject = realObject;
     }
 
     /**
@@ -35,7 +35,7 @@ public class AdminServiceInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Console.log("AdminServiceInvocationHandler.invoke() start...");
-        Object res = method.invoke(adminService, args);
+        Object res = method.invoke(realObject, args);
         Console.log("AdminServiceInvocationHandler.invoke() end.....");
         return res;
     }
