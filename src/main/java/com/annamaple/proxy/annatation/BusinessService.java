@@ -8,7 +8,7 @@ package com.annamaple.proxy.annatation;
  */
 public interface BusinessService {
     
-    @Permission
+    @Permission()
     void method01();
     
     void method02();

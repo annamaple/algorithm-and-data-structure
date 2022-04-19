@@ -15,7 +15,7 @@ public class Test {
         User user10 = new User(10);
         User user11 = new User(11);
         ServiceFactory<BusinessService> factory = new ServiceFactory<>(service);
-        BusinessService service = factory.createProxyBusinessService();
+        BusinessService service = factory.createProxy();
         // 默认operator user id = 1 可以操作
         service.method01();
         // method2 没加无影响

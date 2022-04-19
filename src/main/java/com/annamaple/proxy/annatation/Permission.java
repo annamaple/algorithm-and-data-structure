@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
 public @interface Permission {
 
     /**
-     * value 1 表示需要生成代理类执行
+     * value 1 表示需要进行权限验证
      */
     int value() default 1;
 }

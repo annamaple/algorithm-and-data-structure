@@ -19,7 +19,7 @@ public class ServiceFactory<T> {
     }
 
     @SuppressWarnings("unchecked")
-    public T createProxyBusinessService() {
+    public T createProxy() {
         // 产生代理对象并返回
         return (T) Proxy.newProxyInstance(
                 relObject.getClass().getClassLoader(),
