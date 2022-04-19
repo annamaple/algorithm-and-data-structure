@@ -20,7 +20,7 @@ public class Test {
         service.method01();
         // method2 没加无影响
         service.method02();
-        // 改为11 权限判断五权限
+        // 改为11 权限判断无权限
         Operator.setUser(new User(11));
         service.method01();
         service.method02();
