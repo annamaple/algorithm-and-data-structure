@@ -3,7 +3,7 @@ package com.annamaple.zuo;
 import cn.hutool.core.lang.Console;
 
 /**
- * 这个包下的代码是左神算法可的题的代码
+ * 这个包下的代码是左神算法的题的代码
  */
 public class Main {
 
