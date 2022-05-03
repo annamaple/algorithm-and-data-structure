@@ -17,7 +17,7 @@ public class WallHaven {
 
     private int pageSize = 1;
 //    private String urlTopListPrefix = "https://wallhaven.cc/search?categories=110&purity=100&resolutions=1920x1080&ratios=16x9&topRange=1M&sorting=toplist&order=desc&page=";
-    private String urlTopListPrefix = "https://wallhaven.cc/search?categories=110&purity=100&atleast=1920x1080&topRange=1M&sorting=toplist&order=desc&page=";
+    private String urlTopListPrefix = "https://wallhaven.cc/search?q=id%3A37&categories=110&purity=100&atleast=1920x1080&sorting=toplist&order=desc&page=";
 
     private List<String> imgUrlList = new LinkedList<>();
 
@@ -83,12 +83,20 @@ public class WallHaven {
 
     public static void main(String[] args) throws IOException {
         WallHaven wallHaven = new WallHaven();
-        for (int i = 1; i <= 10; i++) {
-            wallHaven.pageSize = i;
-            Console.log("pageSize = {}", i);
-            wallHaven.getPic();
-        }
-        wallHaven.writeToJs();
+//        for (int i = 1; i <= 10; i++) {
+//            wallHaven.pageSize = i;
+//            Console.log("pageSize = {}", i);
+//            wallHaven.getPic();
+//        }
+//        wallHaven.writeToJs();
+        wallHaven.download();
+    }
+
+    public void download() throws FileNotFoundException {
+        String savePath = "C:\\Users\\lei\\Pictures\\wallhaven\\blog\\";
+        String picJsPath = "D:\\workspace\\algorithm-and-data-structure\\out\\production\\classes\\com\\annamaple\\test\\pic.js";
+        DownloadPicFactory.Downloader downloader = DownloadPicFactory.getDownloader(savePath, picJsPath);
+        downloader.download();
     }
 
 
