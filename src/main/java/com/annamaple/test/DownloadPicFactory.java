@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class DownloadPicFactory {
 
@@ -38,6 +37,24 @@ public class DownloadPicFactory {
             e.printStackTrace();
         }
         return new Downloader(savePath, urlList);
+    }
+
+    public static List<String> getImgName(String picJsPath) {
+        List<String> list = new LinkedList<>();
+        try (FileInputStream inputStream = new FileInputStream(picJsPath);
+             Reader reader = new InputStreamReader(inputStream);
+             BufferedReader bufferedReader = new BufferedReader(reader)) {
+            String url;
+            int suffix = 1;
+            while ((url = bufferedReader.readLine()) != null) {
+                if (url.startsWith("'https")) {
+                    list.add(String.format("%04d-wallhaven%s", suffix++, url.substring(url.lastIndexOf("."), url.lastIndexOf("'"))));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
     public static class Downloader {

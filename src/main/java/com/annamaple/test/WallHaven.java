@@ -59,8 +59,8 @@ public class WallHaven {
     }
 
 
-    public void writeToJs() throws IOException {
-        String fileName = "pic.js";
+    public void writeToJs(String fileName) throws IOException {
+//        String fileName = "pic.js";
         File file = TestFileUtil.createNewFile(fileName);
         if (file.exists()) {
             if (file.createNewFile()) {
@@ -89,7 +89,9 @@ public class WallHaven {
 //            wallHaven.getPic();
 //        }
 //        wallHaven.writeToJs();
-        wallHaven.download();
+//        wallHaven.download();
+        wallHaven.imgUrlList = DownloadPicFactory.getImgName("D:\\workspace\\algorithm-and-data-structure\\out\\production\\classes\\com\\annamaple\\test\\pic.js");
+        wallHaven.writeToJs("picFileName.js");
     }
 
     public void download() throws FileNotFoundException {
