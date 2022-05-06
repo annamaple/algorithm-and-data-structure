@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class AdminServiceInvocationHandler implements InvocationHandler {
 
     /**
-     * 被代理的对象，可以是任意类型。这里是今天代理和动态代理的很大区别
+     * 被代理的对象，可以是任意类型。这里是静态代理和动态代理的很大区别
      */
     private Object realObject;
 
