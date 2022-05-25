@@ -26,7 +26,7 @@ public class Test {
         dataMap.put("x", 1);
         dataMap.put("y", 2);
         dataMap.put("z", 3);
-        
+
         // 计算：dataMap从数据库中查询而来, 即Record中的字段名; 因此公式中的变量也应该为Record中的字段名;不能为中文描述;
         // 因此; 公式存储有两个(一个为中文表意存储; 一个为逻辑存储)
         // 解析到列表时：需要解析出公式中对应的列出来;通过逻辑公式字符串, 解析到所使用的指标(相同项目不同学校不一样)和标准(相同项目不同学校一样);
@@ -35,7 +35,7 @@ public class Test {
         Console.log("res: {}", res);
 
         // (1 + 2) * 1 + (1 + 3) * 2 = 3 + 8 = 11
-        String expression = "(x + y) * x + (x + z) * y";
-        Console.log("{} = {}", expression, AviatorEvaluator.compile(expression).execute(dataMap));
+        String expression = "(x + y) * x + (x + z) * y + 3.9";
+        Console.log("{} = {}", expression, AviatorEvaluator.execute(expression, dataMap));
     }
 }
