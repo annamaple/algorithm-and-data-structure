@@ -37,5 +37,6 @@ public class Test {
         // (1 + 2) * 1 + (1 + 3) * 2 = 3 + 8 = 11
         String expression = "(x + y) * x + (x + z) * y + 3.9";
         Console.log("{} = {}", expression, AviatorEvaluator.execute(expression, dataMap));
+        Console.log("{} = {}", expression, AviatorEvaluator.compile(expression).execute(dataMap));
     }
 }
